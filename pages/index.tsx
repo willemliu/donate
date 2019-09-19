@@ -54,10 +54,22 @@ export default function Index() {
                     width="1"
                     height="1"
                 />
-                <h2>Support our products</h2>
+                <h2>Support our free products</h2>
                 <StyledProducts>
-                    <img src="/static/moviesom128x128.png" />
-                    <img src="/static/WilliM128x128.png" />
+                    <a
+                        href="https://www.moviesom.com"
+                        rel="noopener nofollow"
+                        target="_blank"
+                    >
+                        <img src="/static/moviesom128x128.png" />
+                    </a>
+                    <a
+                        href="https://www.willim.nl"
+                        rel="noopener nofollow"
+                        target="_blank"
+                    >
+                        <img src="/static/WilliM128x128.png" />
+                    </a>
                 </StyledProducts>
             </StyledForm>
         </>
@@ -75,12 +87,17 @@ const StyledForm = styled.form`
     img {
         border: none;
     }
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+    }
 `;
 
 const StyledProducts = styled.section`
     display: flex;
     flex-wrap: wrap;
-    > img:not(:last-child) {
+    > a:not(:last-child) {
         margin-right: 1rem;
     }
 `;
