@@ -6,7 +6,7 @@ import Document, {
     DocumentContext,
 } from 'next/document';
 import React from 'react';
-import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document<any> {
     static async getInitialProps(ctx: DocumentContext) {
@@ -51,7 +51,6 @@ export default class MyDocument extends Document<any> {
                     />
                     <meta httpEquiv="X-UA-Compatible" content="IE=11" />
                     <title>Donate</title>
-                    <GlobalStyle />
                 </Head>
                 <body>
                     <Main />
@@ -61,15 +60,3 @@ export default class MyDocument extends Document<any> {
         );
     }
 }
-
-const GlobalStyle = createGlobalStyle`
-    html, body {
-        height: 100vh;
-    }
-    body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-`;
