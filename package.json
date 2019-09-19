@@ -1,7 +1,7 @@
 {
     "name": "donate",
     "version": "1.0.0",
-    "description": "",
+    "description": "Donation page",
     "main": "index.js",
     "scripts": {
         "build": "next build",
