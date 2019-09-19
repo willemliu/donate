@@ -1,13 +1,40 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { useEffect, useState } from 'react';
+import { ApplicationInsights } from '@microsoft/applicationinsights-web';
+import Head from 'next/head';
 
 export default function Index() {
+    const [appInsights, setAppInsights] = useState(null);
+
+    useEffect(() => {
+        const ai = new ApplicationInsights({
+            config: {
+                instrumentationKey:
+                    process.env.APPLICATION_INSIGHTS_INSTRUMENTATION_KEY || '',
+                enableAutoRouteTracking: true,
+            },
+        });
+        setAppInsights(ai);
+        ai.loadAppInsights();
+        ai.trackEvent({ name: 'Donate landing page' });
+    }, []);
+
+    function onSubmit() {
+        appInsights.trackEvent({ name: 'Donate button clicked' });
+    }
+
     return (
         <>
             <GlobalStyle />
 
+            <Head>
+                <title>Donate</title>
+            </Head>
+
             <StyledForm
                 action="https://www.paypal.com/cgi-bin/webscr"
                 method="post"
+                onSubmit={onSubmit}
             >
                 <input type="hidden" name="cmd" value="_s-xclick" />
                 <input

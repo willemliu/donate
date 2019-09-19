@@ -1,4 +1,9 @@
 {
     "alias": ["donate.willemliu.nl", "donate.moviesom.com", "donate.willim.nl"],
-    "regions": ["dub1"]
+    "regions": ["dub1"],
+    "build": {
+        "env": {
+            "APPLICATION_INSIGHTS_INSTRUMENTATION_KEY": "@moviesom-donate-insights-instrumentation-key"
+        }
+    }
 }

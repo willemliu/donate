@@ -50,7 +50,6 @@ export default class MyDocument extends Document<any> {
                         type="image/x-icon"
                     />
                     <meta httpEquiv="X-UA-Compatible" content="IE=11" />
-                    <title>Donate</title>
                 </Head>
                 <body>
                     <Main />
