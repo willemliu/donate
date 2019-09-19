@@ -17,10 +17,12 @@ export default function Index() {
         setAppInsights(ai);
         ai.loadAppInsights();
         ai.trackEvent({ name: 'Donate landing page' });
+        ai.flush();
     }, []);
 
     function onSubmit() {
         appInsights.trackEvent({ name: 'Donate button clicked' });
+        appInsights.flush();
     }
 
     return (
