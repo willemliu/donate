@@ -88,7 +88,6 @@ const StyledForm = styled.form`
         border: none;
     }
     h2 {
-        font-family: Arial, Helvetica, sans-serif;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
             'Lucida Sans', Arial, sans-serif;
     }
