@@ -60,14 +60,14 @@ export default function Index() {
                 <StyledProducts>
                     <a
                         href="https://www.moviesom.com"
-                        rel="noopener nofollow"
+                        rel="noopener noreferrer"
                         target="_blank"
                     >
                         <img src="/static/moviesom128x128.png" />
                     </a>
                     <a
                         href="https://www.willim.nl"
-                        rel="noopener nofollow"
+                        rel="noopener noreferrer"
                         target="_blank"
                     >
                         <img src="/static/WilliM128x128.png" />
